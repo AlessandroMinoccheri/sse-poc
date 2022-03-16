@@ -1,0 +1,18 @@
+monolog:
+    channels:
+        - commands
+    handlers:
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+            channels: ["!event"]
+        commands:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%_broadway_commands.log"
+            level: info
+            channels: [ "commands" ]
+        nested:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
