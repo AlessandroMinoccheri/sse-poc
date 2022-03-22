@@ -29,10 +29,16 @@ const Auction: React.FC<{}> = function (props) {
     };
 
     return (
-        <div className="container">
-            <input type="number" onChange={e => setBid(e.currentTarget.valueAsNumber)}/>
-            <button onClick={() => make_bid()}>BID</button>
-            <p>Actual winner bid: {winnerBid}</p>
+        <div className="bidder-container">
+            <div className="container">
+                <div className="d-flex">
+                    <input className="form-control mr-1" type="number" onChange={e => setBid(e.currentTarget.valueAsNumber)}/>
+                    <button className="btn btn-success" onClick={() => make_bid()}>BID</button>
+                </div>
+                <div className="row mt-4">
+                    <p>Actual winner bid: {winnerBid}</p>
+                </div>
+            </div>
         </div>
     );
 }
