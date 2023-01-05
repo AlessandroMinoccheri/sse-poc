@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   mercure:
-    container_name: mercure_sse_poc
+    container_name: mercure_sse_poc_sf6
     image: dunglas/mercure
     environment:
       # Uncomment the following line to disable HTTPS

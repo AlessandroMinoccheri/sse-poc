@@ -5,6 +5,18 @@
     "amphp/byte-stream": {
         "version": "v1.8.1"
     },
+    "async-aws/async-aws-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "36bc5854429183d4ba6980c916f9e9284deb3a16"
+        },
+        "files": [
+            "config/packages/async_aws.yaml"
+        ]
+    },
     "async-aws/core": {
         "version": "1.9.2"
     },
